@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Routes, Route, Navigate, Switch } from 'react-router-dom';
 import Header from './Header/Header';
 import Pizza from 'pages/Pizza/Pizza';
 import Cart from 'pages/Cart/Cart';
@@ -35,18 +35,13 @@ export const App = () => {
   return (
     <div>
       <Header cartItemCount={getCartItemCount()} />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route
-          path="/pizza"
-          element={<Pizza addToCart={addToCart} removeFromCart={removeFromCart} cartItemCount={getCartItemCount()} />}
-        />
-        <Route
-          path="/cart"
-          element={<Cart cartItems={cartItems} addToCart={addToCart} removeFromCart={removeFromCart} cartItemCount={getCartItemCount()} />}
-        />
-        <Route path="*" element={<Navigate to="/home" />} />
-      </Routes>
+      <Switch>
+        <Route path="/"><Home /></Route>
+  
+        <Route path="/pizza"><Pizza addToCart={addToCart} removeFromCart={removeFromCart} cartItemCount={getCartItemCount()} /></Route>
+        <Route path="/cart"><Cart cartItems={cartItems} addToCart={addToCart} removeFromCart={removeFromCart} cartItemCount={getCartItemCount()} /></Route>
+        <Route path="*" element={<Navigate to="/" />} />
+      </Switch>
       </div>
   );
 };
