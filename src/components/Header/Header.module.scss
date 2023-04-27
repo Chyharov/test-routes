@@ -1,0 +1,41 @@
+@import '../../sass/utils/mixin';
+
+.header {
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: var(--secondaryTextColor);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  @include mq(tab) {
+
+  }
+
+ &--active {
+    composes: header;
+  }
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cartLogo {
+    width: 30px;
+    height: 30px;   
+}
+
+.navList__itemCart {
+  border-radius: 15px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+}

@@ -1,0 +1,17 @@
+.home__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home__btn {
+    cursor: pointer;
+    color: var(--secondaryTextColor);
+    background-color: var(--buttonColor);
+    padding: 7px;
+    border-radius: 15px;
+    border: none;
+}
