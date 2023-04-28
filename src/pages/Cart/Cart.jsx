@@ -35,7 +35,7 @@ function Cart({ cartItems, removeFromCart, addToCart}) {
   if (cartItems.length === 0) {
     return (
       <div className={'container ' + s.cart__container}>
-        <h1>Please, choose pizza <Link to='/pizza'><button type='button' className={s.cart__hereBtn}>here</button></Link></h1>
+        <h1>Please, choose pizza <Link to='/'><button type='button' className={s.cart__hereBtn}>here</button></Link></h1>
       </div>
     );
   }
