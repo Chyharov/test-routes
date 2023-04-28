@@ -33,9 +33,9 @@ export const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/test-routes">
       <Header cartItemCount={getCartItemCount()} />
-      <Routes basename="/test-routes">
+      <Routes>
         <Route path="/home" element={<Home />} />
         <Route
           path="/pizza"
