@@ -33,9 +33,12 @@ export const App = () => {
   };
 
   return (
-    <Router basename="/test-routes">
+    <>
+
       <Header cartItemCount={getCartItemCount()} />
+      
       <Routes>
+
         <Route path="/" element={<Pizza addToCart={addToCart} removeFromCart={removeFromCart} cartItemCount={getCartItemCount()} />} />
 
         <Route path="/cart" element={<Cart cartItems={cartItems} addToCart={addToCart} removeFromCart={removeFromCart} cartItemCount={getCartItemCount()} />} />
@@ -45,6 +48,7 @@ export const App = () => {
         <Route path="*" element={<Navigate to="/home" />} />
 
       </Routes>
-    </Router>
+      
+</>
   );
 };
