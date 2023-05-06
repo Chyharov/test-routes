@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/test-routes/static/css/main.d9edc12a.css",
-    "main.js": "/test-routes/static/js/main.621396a3.js",
+    "main.js": "/test-routes/static/js/main.ecb3cce2.js",
     "static/media/OpenSans-Regular.ttf": "/test-routes/static/media/OpenSans-Regular.77c09223204154ae8d43.ttf",
     "static/media/OpenSans-SemiBold.ttf": "/test-routes/static/media/OpenSans-SemiBold.2f17aae884058c5a85df.ttf",
     "static/media/OpenSans-Medium.ttf": "/test-routes/static/media/OpenSans-Medium.1f00128ef6182eecdfe2.ttf",
     "static/media/pizza-svgrepo-com.svg": "/test-routes/static/media/pizza-svgrepo-com.683ad75e6ae513b48732674104921c75.svg",
     "index.html": "/test-routes/index.html",
     "main.d9edc12a.css.map": "/test-routes/static/css/main.d9edc12a.css.map",
-    "main.621396a3.js.map": "/test-routes/static/js/main.621396a3.js.map"
+    "main.ecb3cce2.js.map": "/test-routes/static/js/main.ecb3cce2.js.map"
   },
   "entrypoints": [
     "static/css/main.d9edc12a.css",
-    "static/js/main.621396a3.js"
+    "static/js/main.ecb3cce2.js"
   ]
 }
