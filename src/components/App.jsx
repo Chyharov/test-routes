@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './Header/Header';
 import Pizza from 'pages/Pizza/Pizza';
 import Cart from 'pages/Cart/Cart';
@@ -36,7 +36,7 @@ export const App = () => {
     <>
 
       <Header cartItemCount={getCartItemCount()} />
-      
+
       <Routes>
 
         <Route path="/" element={<Pizza addToCart={addToCart} removeFromCart={removeFromCart} cartItemCount={getCartItemCount()} />} />
