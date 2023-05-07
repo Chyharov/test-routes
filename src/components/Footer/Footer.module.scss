@@ -8,7 +8,7 @@
 
 .footer__container {
     display: flex;
-    padding: 20px 0;
+    padding: 20px 30px;
     justify-content: space-between;
 
     @include mq(tab) {

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Spinner from './Spinner/Spinner';
 const Header = lazy(() => import('./Header/Header'));
 const Pizza = lazy(() => import('pages/Pizza/Pizza'));
 const Cart = lazy(() => import('pages/Cart/Cart'));
@@ -95,7 +96,7 @@ export const App = () => {
     <>
       <Header cartItemCount={getCartItemCount()} />
       <main>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Spinner />}>
           <Routes>
             <Route path="/" element={<Pizza handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart} getCartItemQuantity={getCartItemQuantity} />} />
             <Route path="/cart" element={<Cart cartItems={cartItems} handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart} getCartItemQuantity={getCartItemQuantity} totalPrice={totalPrice} handleClearCart={handleClearCart} removeFromCartItem={removeFromCartItem} handleToast={handleToast}/>} />
