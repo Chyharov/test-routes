@@ -1,0 +1,149 @@
+@import '../../sass/utils/mixin';
+
+.footer {
+    width: 100%;
+    background-color: var(--buttonColor);
+    color: var(--secondaryTextColor);
+}
+
+.footer__container {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+
+    @include mq(tab) {
+        font-size: 17px;
+        }
+    
+    @include mq(desk) {
+        font-size: 20px;
+        }
+}
+
+.footer__contactInfoList_Item {
+    font-family: 'Open Sans Regular';
+    font-size: 12px;
+
+    @include mq(tab) {
+        font-size: 20px;
+        }
+    
+    @include mq(desk) {
+        font-size: 22px;
+        }
+}
+
+.footer__contactInfoList_Item:hover {
+    font-size: 13px;
+
+    @include mq(tab) {
+        font-size: 23px;
+        }
+    
+    @include mq(desk) {
+        font-size: 27px;
+        }
+}
+
+.footer__socailMediaList {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    @include mq(tab) {
+        width: 300px;
+        }
+    
+    @include mq(desk) {
+        width: 400px;
+        }
+}
+
+.footer__socailMediaList_Item {
+    width: 27px;
+    height: 27px;
+    padding: 5px;
+
+    @include mq(tab) {
+        width: 50px;
+        height: 50px;
+        }
+    
+    @include mq(desk) {
+        width: 54px;
+        height: 54px;
+        }
+}
+
+.footer__socailMediaList_Item:hover {
+    background-color: var(--secondaryTextColor);
+    color: var(--buttonColor);
+    border-radius: 15px;
+    border: var(--secondaryTextColor);
+}
+
+
+.footer__socailMediaList_ItemSVG {
+    width: 18px;
+    height: 18px;
+
+    @include mq(tab) {
+        width: 40px;
+        height: 40px;
+        }
+    
+    @include mq(desk) {
+        width: 44px;
+        height: 44px;
+        }
+}
+
+.contactInfoList_ItemSVG {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+
+    @include mq(tab) {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        }
+    
+    @include mq(desk) {
+        width: 27px;
+        height: 27px;
+        margin-right: 15px;
+
+        }
+}
+
+.footer__contactInfoList_Item:hover .contactInfoList_ItemSVG {
+
+    @include mq(tab) {
+        transform: scale(1.2);
+        }
+}
+
+.contactInfoList {
+    display: flex;
+}
+
+.footer__socailMediaList_ItemLink {
+    display: flex;
+    align-items: center;
+}
+    
+
+
+.footer__contactInfoList_Item {
+    width: 150px;
+    margin-bottom: 5px;
+
+    @include mq(tab) {
+        width: 400px;
+        margin-bottom: 10px;
+        }
+    
+    @include mq(desk) {
+        width: 600px;
+        }
+}

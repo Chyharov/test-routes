@@ -1,10 +1,18 @@
 @import '../../sass/utils/mixin';
 
-.cart__container {
+.cart__contaner_choose {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cart__container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
@@ -23,47 +31,178 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    padding: 10px;
     margin-bottom: 20px;
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    
+    
     @include mq(mob) {
         max-width: 280px;
+    }
+
+    @include mq(tab) {
+        max-width: 700px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    @include mq(desk) {
+        max-width: 1100px;
+        padding: 30px;
+    }
+}
+
+.pizzaListItem {
+    &:hover {
+        box-shadow: 0px 2px 4px 0px #888;
+      .pizzaListItem__image {
+
+        @include mq(mob) {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+            }
+
+        @include mq(tab) {
+            transform: scale(1.2);
+            transition: transform 0.3s ease-in-out;
+            }
+
+
+        @include mq(desk) {
+            transform: scale(1.25);
+            transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+.pizzaListItem__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include mq(tab) {
+        width: 500px;
+        margin-right: 20px;
+    }
+
+    @include mq(desk) {
+        width: 800px;
+        margin-right: 30px;
     }
 }
 
 .pizzaList {
-    padding-top: 80px;
+    padding-top: 90px;
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pizzaListItem__image {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-right: 10px;
+
+    @include mq(tab) {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    }
+
+    @include mq(desk) {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    }
 }
 
 .pizzaListItem__container {
-    padding: 10px;
-}
-
-.pizzaListItem__title {
-    margin-bottom: 10px;
-}
-
-.pizzaListItem__description {
+    display: flex;
     margin-bottom: 20px;
 }
 
+.pizzaListItem__title {
+    font-family: 'Open Sans Semibold';
+    text-align: start;
+    font-size: 17px;
+    margin-bottom: 10px;
+
+    @include mq(tab) {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    @include mq(desk) {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+.pizzaListItem__description {
+    font-family: 'Open Sans Regular';
+    text-align: start;
+    font-size: 12px;
+
+    @include mq(tab) {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    @include mq(desk) {
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
 .pizzaListItem__priceContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+
+    @include mq(mob) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    @include mq(tab) {
+        display: flex;
+        align-items: center;
+        width: 110px;
+        flex-direction: column;
+        justify-content: space-between;
+        }
+
+    @include mq(desk) {
+        display: flex;
+        align-items: center;
+        width: 150px;
+        flex-direction: column;
+        justify-content: space-between;
+        }
 }
 
 .pizzaListItem__price {
     color: var(--primaryTextColor);
+    font-family: 'Open Sans Regular';
+    font-size: 17px;
+
+    @include mq(tab) {
+        font-size: 22px;
+
+        }
+    
+    @include mq(desk) {
+        font-size: 30px;
+
+        }
 }
 
 .pizzaListItem__btn {
@@ -74,8 +213,213 @@
     border: none;
     width: 30px;
     height: 30px;
+
 }
 
 .pizzaListItem__btnSVG {
     fill: var(--primaryTextColor);
+}
+
+.totalContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    @include mq(tab) {
+        padding: 20px 0;
+    }
+
+    @include mq(desk) {
+        padding: 30px 0;
+    }
+}
+
+.totalPrice {
+    font-family: 'Open Sans Regular';
+    font-size: 17px;
+    padding-right: 5px;
+
+    @include mq(tab) {
+        font-size: 22px;
+        padding-right: 10px;
+        }
+    
+    @include mq(desk) {
+        font-size: 25px;
+        }
+
+}
+
+.orderButton {
+    font-family: 'Open Sans Regular';
+    font-size: 17px;
+    cursor: pointer;
+    color: var(--secondaryTextColor);
+    background-color: var(--buttonColor);
+    padding: 7px;
+    border-radius: 15px;
+    border: none;
+
+    @include mq(tab) {
+        font-size: 22px;
+        padding: 10px;
+        }
+    
+    @include mq(desk) {
+        font-size: 25px;
+        padding: 15px;
+        }
+    
+}
+
+.pizzaListItem__cartControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(tab) {
+        width: 104px;
+        height: 44px;
+        }
+    
+    @include mq(desk) {
+        width: 154px;
+        height: 54px;
+        }
+}
+
+.pizzaListItem__cartButton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(228, 228, 228);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pizzaListItem__cartButtonTrash {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--secondaryTextColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(tab) {
+        width: 40px;
+        height: 40px;
+        }
+    
+    @include mq(desk) {
+        width: 50px;
+        height: 50px;
+        }
+}
+
+.pizzaListItem__cartButtonTrash:hover {
+    color: var(--buttonColor);
+}
+
+.pizzaListItem__cartButton_increment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    color: var(--primaryTextColor);
+    background-color: rgb(228, 228, 228);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+
+    @include mq(tab) {
+            width: 40px;
+            height: 40px;
+        }
+    
+        @include mq(desk) {
+            width: 50px;
+            height: 50px;
+        }
+}
+
+.pizzaListItem__cartButton_increment:hover {
+    color: var(--secondaryTextColor);
+    background-color: #00bb1f;
+}
+
+.pizzaListItem__cartButton_decrement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    color: var(--primaryTextColor);
+    background-color: rgb(228, 228, 228);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+
+    @include mq(tab) {
+            width: 40px;
+            height: 40px;
+        }
+    
+        @include mq(desk) {
+            width: 50px;
+            height: 50px;
+        }
+}
+
+.pizzaListItem__cartButton_decrement:hover {
+    color: var(--secondaryTextColor);
+    background-color: var(--buttonColor);
+}
+
+.pizzaListItem__cartButtonSvg {
+    width: 20px;
+    height: 20px;
+
+    @include mq(tab) {
+        width: 30px;
+        height: 30px;
+    }
+    
+    @include mq(desk) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.pizzaListItem__cartQuantity {
+    font-family: 'Open Sans Semibold';
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 228, 228);
+    height: 30px;
+    padding: 0 10px;
+
+    @include mq(tab) {
+            font-size: 17px;
+            width: 40px;
+            height: 40px;
+        }
+    
+        @include mq(desk) {
+            font-size: 23px;
+            width: 50px;
+            height: 50px;
+        }
 }

@@ -1,15 +1,14 @@
 @import '../../sass/utils/mixin';
 
-.logo__Container {
+.button {
     font-family: 'Open Sans Regular';
     font-size: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--buttonColor);
+    cursor: pointer;
     color: var(--secondaryTextColor);
+    background-color: var(--buttonColor);
     padding: 7px;
     border-radius: 15px;
+    border: none;
 
     @include mq(tab) {
         font-size: 22px;
@@ -22,13 +21,8 @@
     }
 }
 
-.logo__Container:hover {
+.button:hover {
     color: var(--buttonColor);
     background-color: var(--secondaryTextColor);
     outline: 1px solid var(--buttonColor);
-  }
-
-.logo__Header {
-    width: 30px;
-    height: 30px;
 }

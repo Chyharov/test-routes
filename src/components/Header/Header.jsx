@@ -6,7 +6,7 @@ import { BsCartFill } from "react-icons/bs";
 
 function Header({cartItemCount}) {
 
-  return (
+  return ( 
     <header className={s.header}>
       <div className={'container ' + s.header__container}>
         <nav>
