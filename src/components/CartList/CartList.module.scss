@@ -35,8 +35,8 @@
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 15px;
-    
-    
+
+
     @include mq(mob) {
         max-width: 280px;
     }
@@ -58,26 +58,27 @@
 .pizzaListItem {
     &:hover {
         box-shadow: 0px 2px 4px 0px #888;
-      .pizzaListItem__image {
 
-        @include mq(mob) {
-            transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
+        .pizzaListItem__image {
+
+            @include mq(mob) {
+                transform: scale(1.1);
+                transition: transform 0.3s ease-in-out;
             }
 
-        @include mq(tab) {
-            transform: scale(1.2);
-            transition: transform 0.3s ease-in-out;
+            @include mq(tab) {
+                transform: scale(1.2);
+                transition: transform 0.3s ease-in-out;
             }
 
 
-        @include mq(desk) {
-            transform: scale(1.25);
-            transition: transform 0.3s ease-in-out;
+            @include mq(desk) {
+                transform: scale(1.25);
+                transition: transform 0.3s ease-in-out;
+            }
         }
-      }
     }
-  }
+}
 
 .pizzaListItem__info {
     display: flex;
@@ -110,15 +111,15 @@
     margin-right: 10px;
 
     @include mq(tab) {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
     }
 
     @include mq(desk) {
-    width: 200px;
-    height: 200px;
-    margin-right: 30px;
+        width: 200px;
+        height: 200px;
+        margin-right: 30px;
     }
 }
 
@@ -144,7 +145,7 @@
         font-size: 30px;
         margin-bottom: 30px;
     }
-    
+
 }
 
 .pizzaListItem__description {
@@ -178,7 +179,7 @@
         width: 110px;
         flex-direction: column;
         justify-content: space-between;
-        }
+    }
 
     @include mq(desk) {
         display: flex;
@@ -186,7 +187,7 @@
         width: 150px;
         flex-direction: column;
         justify-content: space-between;
-        }
+    }
 }
 
 .pizzaListItem__price {
@@ -197,12 +198,12 @@
     @include mq(tab) {
         font-size: 22px;
 
-        }
-    
+    }
+
     @include mq(desk) {
         font-size: 30px;
 
-        }
+    }
 }
 
 .pizzaListItem__btn {
@@ -243,11 +244,11 @@
     @include mq(tab) {
         font-size: 22px;
         padding-right: 10px;
-        }
-    
+    }
+
     @include mq(desk) {
         font-size: 25px;
-        }
+    }
 
 }
 
@@ -264,13 +265,13 @@
     @include mq(tab) {
         font-size: 22px;
         padding: 10px;
-        }
-    
+    }
+
     @include mq(desk) {
         font-size: 25px;
         padding: 15px;
-        }
-    
+    }
+
 }
 
 .pizzaListItem__cartControls {
@@ -281,12 +282,12 @@
     @include mq(tab) {
         width: 104px;
         height: 44px;
-        }
-    
+    }
+
     @include mq(desk) {
         width: 154px;
         height: 54px;
-        }
+    }
 }
 
 .pizzaListItem__cartButton {
@@ -314,12 +315,12 @@
     @include mq(tab) {
         width: 40px;
         height: 40px;
-        }
-    
+    }
+
     @include mq(desk) {
         width: 50px;
         height: 50px;
-        }
+    }
 }
 
 .pizzaListItem__cartButtonTrash:hover {
@@ -341,14 +342,14 @@
     border-top-right-radius: 15px;
 
     @include mq(tab) {
-            width: 40px;
-            height: 40px;
-        }
-    
-        @include mq(desk) {
-            width: 50px;
-            height: 50px;
-        }
+        width: 40px;
+        height: 40px;
+    }
+
+    @include mq(desk) {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .pizzaListItem__cartButton_increment:hover {
@@ -371,14 +372,14 @@
     border-top-left-radius: 15px;
 
     @include mq(tab) {
-            width: 40px;
-            height: 40px;
-        }
-    
-        @include mq(desk) {
-            width: 50px;
-            height: 50px;
-        }
+        width: 40px;
+        height: 40px;
+    }
+
+    @include mq(desk) {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .pizzaListItem__cartButton_decrement:hover {
@@ -394,7 +395,7 @@
         width: 30px;
         height: 30px;
     }
-    
+
     @include mq(desk) {
         width: 40px;
         height: 40px;
@@ -412,14 +413,14 @@
     padding: 0 10px;
 
     @include mq(tab) {
-            font-size: 17px;
-            width: 40px;
-            height: 40px;
-        }
-    
-        @include mq(desk) {
-            font-size: 23px;
-            width: 50px;
-            height: 50px;
-        }
+        font-size: 17px;
+        width: 40px;
+        height: 40px;
+    }
+
+    @include mq(desk) {
+        font-size: 23px;
+        width: 50px;
+        height: 50px;
+    }
 }

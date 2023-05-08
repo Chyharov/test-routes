@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import { BsPlus, BsDash, BsTrash } from 'react-icons/bs';
 import Button from 'components/Button/Button';
-import s from './Cart.module.scss';
+import s from './CartList.module.scss';
 
-function Cart({ cartItems, handleRemoveFromCart, handleAddToCart, getCartItemQuantity, totalPrice, handleClearCart, removeFromCartItem, handleToast }) {
+function CartList({ cartItems, handleRemoveFromCart, handleAddToCart, getCartItemQuantity, totalPrice, handleClearCart, removeFromCartItem, handleToast }) {
   return (
-    <section className={s.section_cartPage}>
     <div className={`container ${cartItems.length === 0 ? s.cart__contaner_choose : s.cart__container}`}>
       {cartItems.length === 0 ? (
         <h1>Please choose pizza <Link to="/"><Button text="here" aria-label="Button choose pizza" ></Button></Link></h1>
@@ -60,8 +59,7 @@ function Cart({ cartItems, handleRemoveFromCart, handleAddToCart, getCartItemQua
         </>
       )}
       </div>
-      </section>
   );
 }
 
-export default Cart;
+export default CartList;

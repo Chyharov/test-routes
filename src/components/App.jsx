@@ -4,9 +4,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from './Spinner/Spinner';
 const Header = lazy(() => import('./Header/Header'));
-const Pizza = lazy(() => import('pages/Pizza/Pizza'));
-const Cart = lazy(() => import('pages/Cart/Cart'));
-const Home = lazy(() => import('pages/Home/Home'));
+const PizzaPage = lazy(() => import('pages/PizzaPage/PizzaPage'));
+const CartPage = lazy(() => import('pages/CartPage/CartPage'));
+const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const Footer = lazy(() => import('./Footer/Footer'));
 
 export const App = () => {
@@ -98,9 +98,9 @@ export const App = () => {
       <main>
         <Suspense fallback={<Spinner />}>
           <Routes>
-            <Route path="/" element={<Pizza handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart} getCartItemQuantity={getCartItemQuantity} />} />
-            <Route path="/cart" element={<Cart cartItems={cartItems} handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart} getCartItemQuantity={getCartItemQuantity} totalPrice={totalPrice} handleClearCart={handleClearCart} removeFromCartItem={removeFromCartItem} handleToast={handleToast}/>} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<PizzaPage handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart} getCartItemQuantity={getCartItemQuantity} />} />
+            <Route path="/cart" element={<CartPage cartItems={cartItems} handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart} getCartItemQuantity={getCartItemQuantity} totalPrice={totalPrice} handleClearCart={handleClearCart} removeFromCartItem={removeFromCartItem} handleToast={handleToast}/>} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="*" element={<Navigate to="/home" />} />
           </Routes>
         </Suspense>
